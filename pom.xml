@@ -41,8 +41,8 @@
 	</issueManagement>
 
 	<scm>
-		<connection>scm:git:git@github.com/javanto/smack-facebook.git</connection>
-		<developerConnection>scm:git:git@github.com/javanto/smack-facebook.git</developerConnection>
+		<connection>scm:git://git@github.com/javanto/smack-facebook.git</connection>
+		<developerConnection>scm:git://git@github.com/javanto/smack-facebook.git</developerConnection>
 		<url>https://github.com/javanto/smack-facebook</url>
 	</scm>
 
