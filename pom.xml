@@ -1,0 +1,113 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.javanto</groupId>
+	<artifactId>smack-facebook</artifactId>
+	<packaging>jar</packaging>
+	<name>smack-facebook</name>
+	<version>1.0-SNAPSHOT</version>
+	<description>Facebook chat capability for Smack.</description>
+
+	<organization>
+		<name>Javanto</name>
+		<url>http://javanto.com</url>
+	</organization>
+	<url>http://github.com/javanto/smack-facebook</url>
+	<developers>
+		<developer>
+			<id>hleinone</id>
+			<name>Hannu Leinonen</name>
+			<email>hleinone@gmail.com</email>
+			<url>http://javanto.com</url>
+			<organization>Javanto</organization>
+			<organizationUrl>http://javanto.com</organizationUrl>
+			<roles>
+				<role>owner</role>
+			</roles>
+			<timezone>+2</timezone>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/javanto/smack-facebook/issues</url>
+	</issueManagement>
+	
+	<scm>
+		<connection>scm:git:git://git@github.com/javanto/smack-facebook.git</connection>
+		<developerConnection>scm:git:git://git@github.com/javanto/smack-facebook.git</developerConnection>
+		<url>https://github.com/javanto/smack-facebook</url>
+	</scm>
+	
+	<build>
+		<extensions>
+			<extension>
+				<groupId>ar.com.synergian</groupId>
+				<artifactId>wagon-git</artifactId>
+				<version>0.1.4</version>
+			</extension>
+		</extensions>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.2.2</version>
+			</plugin>
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>javanto-releases</id>
+			<url>git:releases://git@github.com:javanto/repository.git</url>
+		</repository>
+		<snapshotRepository>
+			<id>javanto-snapshots</id>
+			<uniqueVersion>false</uniqueVersion>
+			<url>git:snapshots://git@github.com:javanto/repository.git</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>synergian-repo</id>
+			<url>https://raw.github.com/synergian/wagon-git/releases</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.igniterealtime.smack</groupId>
+			<artifactId>smack</artifactId>
+			<version>3.2.1</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+</project>
